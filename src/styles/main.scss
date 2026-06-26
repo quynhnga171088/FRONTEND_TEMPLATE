@@ -1,0 +1,119 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'fontawesome' as *;
+@use 'controls/button';
+@use 'controls/hero';
+@import './tailwind.css';
+@import 'simplebar-react/dist/simplebar.min.css';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  color: #1c1917;
+  background: #f5f0e8;
+  line-height: 1.6;
+  font-size: $font-size-16;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+ul {
+  list-style: none;
+}
+
+/* UTILITIES Start */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 calc(var(--spacing) * 8);
+}
+.section    {
+  padding: calc(var(--spacing) * 24) 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  line-height: 1.15;
+}
+
+/* Section label badge */
+.section-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--color-success-100);
+  color: var(--color-success-700);
+  font-size: $font-size-13;
+  font-weight: 600;
+  padding: calc(var(--spacing) * 1.5) calc(var(--spacing) * 3.5); border-radius: 999px;
+  margin-bottom: calc(var(--spacing) * 4);
+}
+.section-badge.orange {
+  background: var(--color-orange-200);
+  color: var(--color-orange-600);
+}
+.section-badge.peach  {
+  background: var(--color-orange-50);
+  color: var(--color-orange-600);
+}
+
+.section-title {
+  font-size: clamp(calc(var(--spacing) * 7.5), 4vw, calc(var(--spacing) * 11));
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: calc(var(--spacing) * 3.5);
+}
+.section-desc {
+  font-size: $font-size-16;
+  color: var(--text-muted);
+  max-width: 560px;
+}
+
+/* Gradient text */
+.grad-text {
+  background: linear-gradient(135deg, var(--color-success-600) 0%, var(--color-orange-600) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Tags / Pills */
+.pill {
+  display: inline-block; padding: 3px 10px; border-radius: 999px;
+  font-size: $font-size-12;
+  font-weight: 600;
+}
+.pill-orange {
+  background: var(--orange); color: #fff;
+}
+.pill-teal   {
+  background: var(--teal); color: #fff;
+}
+.pill-white  {
+  background: rgba(255,255,255,0.85);
+  color: var(--text);
+  font-size: $font-size-11;
+}

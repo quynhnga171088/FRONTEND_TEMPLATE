@@ -1,13 +1,12 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import App from './App';
-import { authStore } from '@/stores/auth.store';
+
+import '@/styles/tailwind.css';
+import '@/styles/main.scss';
+import App from '@/App';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <App />
-  </StrictMode>,
+  </StrictMode>
 );
-
-/* Rehydrate Zustand persist stores after React mounts to avoid hooks-order mismatch */
-authStore.persist.rehydrate();

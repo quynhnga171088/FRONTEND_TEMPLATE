@@ -1,0 +1,190 @@
+@use 'variables' as *;
+
+@for $i from 0 through 10 {
+  .g-margin-right-#{$i * 5} {
+    margin-right: #{$i * 5}px !important;
+  }
+}
+
+@for $i from 0 through 10 {
+  .g-margin-top-#{$i * 5} {
+    margin-top: #{$i * 5}px !important;
+  }
+}
+
+@for $i from 0 through 20 {
+  .g-margin-bottom-#{$i * 5} {
+    margin-bottom: #{$i * 5}px !important;
+  }
+}
+
+@for $i from 0 through 10 {
+  .g-flex-grow-#{$i} {
+    flex-grow: #{$i};
+  }
+}
+
+@for $i from 0 through 10 {
+  .g-margin-left-#{$i * 5} {
+    margin-left: #{$i * 5}px !important;
+  }
+}
+
+@for $i from 0 through 20 {
+  .g-padding-right-#{$i * 5} {
+    padding-right: #{$i * 5}px !important;
+  }
+}
+
+@for $i from 0 through 20 {
+  .g-padding-left-#{$i * 5} {
+    padding-left: #{$i * 5}px !important;
+  }
+}
+
+@for $i from 0 through 20 {
+  .g-padding-top-#{$i * 5} {
+    padding-top: #{$i * 5}px !important;
+  }
+}
+
+@for $i from 1 through 10 {
+  .g-padding-bottom-#{$i * 5} {
+    padding-bottom: #{$i * 5}px !important;
+  }
+}
+
+
+@for $i from 1 through 50 {
+  .g-height-#{$i} {
+    height: #{$i}px !important;
+  }
+}
+
+@for $i from 1 through 50 {
+  .g-width-#{$i} {
+    width: #{$i}px !important;
+  }
+}
+
+
+@for $i from 1 through 100 {
+  .g-width-#{$i }-per {
+    width: #{$i} + '% !important';
+  }
+}
+
+$fonts: (
+  "10": 0.65rem,
+  "11": 0.7rem,
+  "12": 0.75rem,
+  "13": 0.825rem,
+  "14": 0.875rem,
+  "15": 0.9375rem,
+  "16": 1rem,
+  "18": 1.125rem,
+  "19": 1.25rem,
+  "20": 1.375rem,
+  "21": 1.4375rem,
+  "22": 1.5rem,
+  "23": 1.75rem,
+  "24": 1.875rem,
+  "25": 1.5625rem,
+  "26": 1.625rem,
+  "27": 1.6875rem,
+  "28": 1.75rem,
+  "29": 1.8125rem,
+  "30": 1.875rem
+);
+
+@each $name, $size in $fonts {
+  .g-font-size-#{$name} {
+    font-size: $size;
+  }
+  .g-font-size-#{$name}-important {
+    font-size: $size !important;
+  }
+}
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: #{$breakpoint-sm}) { @content; }
+  } @else if $breakpoint == md {
+    @media (min-width: #{$breakpoint-md}) { @content; }
+  } @else if $breakpoint == lg {
+    @media (min-width: #{$breakpoint-lg}) { @content; }
+  } @else if $breakpoint == xl {
+    @media (min-width: #{$breakpoint-xl}) { @content; }
+  } @else if $breakpoint == 2xl {
+    @media (min-width: #{$breakpoint-2xl}) { @content; }
+  }
+}
+
+// ─── Flexbox Helpers ──────────────────────────────────────────────────────────
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// ─── Typography ───────────────────────────────────────────────────────────────
+@mixin truncate($lines: 1) {
+  @if $lines == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+// ─── Transitions ──────────────────────────────────────────────────────────────
+@mixin transition($properties: all, $duration: $transition-base) {
+  transition: $properties $duration;
+}
+
+// ─── Scrollbar ────────────────────────────────────────────────────────────────
+@mixin custom-scrollbar($width: 6px, $color: $color-gray-300) {
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color;
+    border-radius: $border-radius-full;
+  }
+}
+
+// ─── Focus Ring ───────────────────────────────────────────────────────────────
+@mixin focus-ring($color: $color-primary) {
+  outline: 2px solid $color;
+  outline-offset: 2px;
+}
+
+// ─── Absolute Fill ────────────────────────────────────────────────────────────
+@mixin absolute-fill {
+  position: absolute;
+  inset: 0;
+}
+
+// ─── Card ─────────────────────────────────────────────────────────────────────
+@mixin card($padding: $spacing-6) {
+  background-color: $color-white;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-md;
+  padding: $padding;
+}
+

@@ -1,0 +1,71 @@
+@use '@/styles/variables' as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing) * 10);
+  height: 68px;
+
+  i {
+    color: var(--color-orange-50);
+  }
+}
+.logo {
+  display: flex; align-items: center; gap: 10px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: $font-size-20;
+  font-weight: 700;
+  color: var(--text);
+  flex-shrink: 0;
+}
+.logo-icon {
+  width: calc(var(--spacing) * 9);
+  height: calc(var(--spacing) * 9);
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--color-success-600) 0%, var(--color-info-600) 100%);
+  display: grid;
+  place-items: center;
+  font-size: $font-size-18;
+}
+nav { display: flex; align-items: center; gap: 2px; flex: 1; }
+nav a {
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: $font-size-14;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: all 0.18s;
+}
+nav a:hover {
+  color: var(--color-gray-900);
+  background: oklch(96% .006 60);
+}
+.header-right { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+.header-icon-btn {
+  width: calc(var(--spacing) * 9);
+  height: calc(var(--spacing) * 9);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: $font-size-16;
+  transition: background 0.18s;
+
+  i {
+    color: var(--text-muted);
+  }
+}
+.header-icon-btn:hover {
+  background: var(--border-light);
+}
