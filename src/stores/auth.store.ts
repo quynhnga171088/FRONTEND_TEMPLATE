@@ -21,6 +21,7 @@ export const authStore = create<IAuthState>()(
     }),
     {
       name: 'auth-store',
+      skipHydration: true,
       partialize: (state: IAuthState) => ({
         user: state.user,
         accessToken: state.accessToken,
