@@ -89,6 +89,7 @@
   --color-orange-950: #431407;
   --color-orange: #f97316;
 
+  --color-success-10: #e8faf5;
   --color-success-50: #c4f9ec;
   --color-success-100: #b2f7e6;
   --color-success-200: #8df4da;
@@ -194,6 +195,7 @@
   --shadow:      0 4px 16px rgba(0,0,0,0.08);
   --shadow-lg:   0 12px 40px rgba(0,0,0,0.10);
   --container:   1200px;
+  --animate-ping: ping 1s cubic-bezier(0, 0, .2, 1) infinite;
 }
 
 /* Expose theme tokens as CSS custom properties for use with var() */
@@ -395,4 +397,5 @@
   --shadow:      0 4px 16px rgba(0,0,0,0.08);
   --shadow-lg:   0 12px 40px rgba(0,0,0,0.10);
   --container:   1200px;
+  --animate-ping: ping 1s cubic-bezier(0, 0, .2, 1) infinite;
 }

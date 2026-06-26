@@ -6,6 +6,7 @@ const Home = () => {
         <div className="hero-inner">
           <div>
             <div className="hero-announce">
+              <span className="dot animate-ping"></span>
               <span className="dot"></span>
               New: AI &amp; Machine Learning Track
             </div>
