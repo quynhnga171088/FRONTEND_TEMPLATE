@@ -12,16 +12,17 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 40%;
+  width: 50%;
   height: 60%;
-  background: radial-gradient(ellipse at top left, rgba(73, 218, 143, 0.4) 0%, transparent 70%);
+  background: radial-gradient(ellipse at top left, rgba(73, 218, 143, 0.3) 0%, transparent 70%);
   pointer-events: none;
 }
 .hero::after {
   content: '';
   position: absolute; bottom: 0; right: 0;
-  width: 35%; height: 50%;
-  background: radial-gradient(ellipse at bottom right, rgba(234,88,12,0.10) 0%, transparent 70%);
+  width: 50%;
+  height: 60%;
+  background: radial-gradient(ellipse at bottom right, rgba(12, 183, 234, 0.3) 0%, transparent 70%);
   pointer-events: none;
 }
 .hero-inner {
@@ -120,7 +121,67 @@
 }
 
 /* Hero Right - Visual Card */
-.hero-visual { position: relative; }
+.hero-visual {
+  position: relative;
+
+  .float-card {
+    z-index: 2;
+    --tw-backdrop-blur: blur(calc(var(--spacing) * 2));
+    border-radius: 0.5rem;
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.8px);
+    -webkit-backdrop-filter: blur(8.8px);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+
+    position: absolute;
+
+
+    i {
+      font-size: 20px;
+    }
+
+    .float-card-body {
+      .float-text-main {
+        font-weight: 600;
+        color: var(--color-secondary-700);
+      }
+      .float-text-sub {
+        color: var(--color-secondary-400);
+      }
+    }
+  }
+
+  .float-card.float-progress {
+    height: 80px;
+    width: 290px;
+    top: 110px;
+    left: -20px;
+
+    .float-card-header {
+      padding: 0.75rem 0.75rem;
+      border-radius: 8px;
+      background-color: var(--color-orange-100);
+      color: var(--color-orange-700);
+    }
+  }
+
+  .float-card.float-certificate {
+    height: 80px;
+    width: 290px;
+    top: 10px;
+    right: -20px;
+
+    .float-card-header {
+      padding: 0.75rem 0.75rem;
+      border-radius: 8px;
+      background-color: var(--color-success-50);
+      color: var(--color-success-700);
+    }
+  }
+}
 .hero-main-card {
   background: #fff; border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg); overflow: hidden;

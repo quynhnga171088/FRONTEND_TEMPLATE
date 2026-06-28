@@ -36,11 +36,13 @@ const Home = () => {
           </div>
 
           <div className="hero-visual">
-            <div className="float-card float-cert">
-              <div className="float-icon-circle">✓</div>
-              <div>
-                <div className="float-text-main">Certificate Earned!</div>
-                <div className="float-text-sub">React Development Pro</div>
+            <div className="float-card float-certificate shadow-lg p-4! flex items-center">
+              <div className="float-card-header flex items-center shadow-lg">
+                <i className="fa-regular fa-check-circle" />
+              </div>
+              <div className="float-card-body p-2!">
+                <div className="float-text-main g-font-size-15">Certificate Earned!</div>
+                <div className="float-text-sub g-font-size-13">React Development Pro</div>
               </div>
             </div>
 
@@ -64,11 +66,13 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="float-card float-progress">
-              <div className="float-icon-circle orange"><i className="fa-regular fa-check-circle" /></div>
-              <div>
-                <div className="float-text-main">Skill Progress</div>
-                <div className="progress-bar">
+            <div className="float-card float-progress shadow-lg p-4! flex items-center">
+              <div className="float-card-header flex items-center shadow-lg">
+                <i className="fa-regular fa-arrow-trend-up" />
+              </div>
+              <div className="float-card-body p-2!">
+                <div className="float-text-main g-font-size-15">Skill Progress</div>
+                <div className="float-text-sub">
                   <div className="progress-fill"></div>
                 </div>
               </div>
