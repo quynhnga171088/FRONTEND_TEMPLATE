@@ -4,6 +4,7 @@ import '@/pages/home/Home.scss';
 import Categories from '@/pages/home/categories/Categories';
 import { SCREENS_PATH } from '@/config/constant.ts';
 import FeaturedCourses from '@/pages/home/featuredCourses/FeaturedCourses.tsx';
+import Instructors from '@/pages/home/instructors/Instructors.tsx';
 
 const Home = () => {
   return (
@@ -114,6 +115,7 @@ const Home = () => {
       </div>
       <Categories />
       <FeaturedCourses />
+      <Instructors />
     </div>);
 };
 

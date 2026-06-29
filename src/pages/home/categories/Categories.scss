@@ -1,0 +1,85 @@
+.categories {
+  padding-top: 20px;
+  padding-bottom: 96px;
+
+  .section-header-row {
+    display: flex; justify-content: space-between;
+    align-items: flex-end; margin-bottom: 40px; flex-wrap: wrap; gap: 16px;
+  }
+  .link-teal {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--teal);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing);
+    transition: gap 0.2s;
+  }
+  .link-teal:hover {
+    gap: calc(var(--spacing) * 2);
+  }
+  .categories-grid {
+    display: grid;
+    grid-template-columns:
+      repeat(4, 1fr);
+    gap: calc(var(--spacing) * 5);
+  }
+  .cat-card {
+    background: var(--color-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    transition: all 0.2s; cursor: pointer;
+  }
+
+  .cat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -12px #00000026;
+    border-color: var(--color-success-700);
+
+    .cat-name {
+      color: var(--color-success-700);
+    }
+    .cat-count {
+      i {
+        color: var(--color-success-700);
+        font-weight: 700;
+      }
+    }
+  }
+  .cat-icon {
+    width: 56px; height: 56px;
+    border-radius: 12px;
+    display: grid; place-items: center;
+    font-size: 22px; margin-bottom: 16px;
+  }
+  .cat-icon.green  { background: #d1fae5; color: #059669; }
+  .cat-icon.peach  { background: #fde8d8; color: #ea580c; }
+  .cat-icon.red    { background: #fee2e2; color: #dc2626; }
+  .cat-icon.blue   { background: #dbeafe; color: #2563eb; }
+  .cat-icon.purple { background: #ede9fe; color: #7c3aed; }
+  .cat-icon.yellow { background: #fef3c7; color: #d97706; }
+  .cat-icon.pink   { background: #fce7f3; color: #db2777; }
+  .cat-icon.teal   { background: var(--teal-light); color: var(--teal); }
+  .cat-name  {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--color-dark-500);
+  }
+  .cat-desc  {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    line-height: 1.6;
+  }
+  .cat-count {
+    font-size: 13px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .cat-count span { color: var(--teal); font-size: 16px; }
+}
