@@ -4,7 +4,8 @@
   display: inline-flex;
   align-items: center;
   gap: calc(var(--spacing) * 2);
-  padding: calc(var(--spacing) * 3) calc(var(--spacing) * 5); border-radius: var(--radius-sm);
+  padding: calc(var(--spacing) * 3) calc(var(--spacing) * 5);
+  border-radius: var(--radius-sm);
   font-size: $font-size-15;
   font-weight: 600;
   cursor: pointer;
@@ -26,17 +27,23 @@
   color: var(--text);
   border: 1.5px solid var(--border);
 }
-.btn-outline:hover { border-color: var(--teal); color: var(--teal); }
-.btn-white  { background: #fff; color: var(--teal-dark); }
+.btn-outline:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+}
+.btn-white  {
+  background: var(--color-white);
+  color: var(--teal-dark);
+}
 .btn-white:hover { background: #f0fdf4; }
 .btn-ghost-white {
   background: transparent;
-  color: #fff;
+  color: var(--color-white);
   border: 1.5px solid rgba(255,255,255,0.5);
 }
 .btn-ghost-white:hover {
   background: rgba(255,255,255,0.1);
-  border-color: #fff;
+  border-color: var(--color-white);
 }
 .btn-lg {
   padding: calc(var(--spacing) * 3.5) calc(var(--spacing) * 7);
@@ -52,7 +59,8 @@
 }
 .btn-signin:hover { background: var(--border-light); }
 .btn-header-cta {
-  background: var(--teal-dark); color: #fff;
+  background: var(--teal-dark);
+  color: var(--color-white);
   font-size: $font-size-14;
   font-weight: 600;
   padding: 9px 20px;

@@ -1,0 +1,49 @@
+@use 'variables' as *;
+
+@for $i from 0 through 40 {
+  .margin-right-#{$i} {
+    margin-right: #{$i}px !important;
+  }
+}
+
+@for $i from 0 through 40 {
+  .margin-top-#{$i} {
+    margin-top: #{$i}px !important;
+  }
+}
+
+@for $i from 0 through 40 {
+  .margin-bottom-#{$i} {
+    margin-bottom: #{$i}px !important;
+  }
+}
+
+@for $i from 0 through 40 {
+  .margin-left-#{$i} {
+    margin-left: #{$i}px !important;
+  }
+}
+
+@for $i from 0 through 40 {
+  .padding-right-#{$i} {
+    padding-right: #{$i * 5}px !important;
+  }
+}
+
+@for $i from 0 through 40 {
+  .padding-left-#{$i} {
+    padding-left: #{$i}px !important;
+  }
+}
+
+@for $i from 0 through 40 {
+  .g-padding-top-#{$i * 5} {
+    padding-top: #{$i * 5}px !important;
+  }
+}
+
+@for $i from 1 through 40 {
+  .g-padding-bottom-#{$i} {
+    padding-bottom: #{$i}px !important;
+  }
+}

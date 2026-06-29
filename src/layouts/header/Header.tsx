@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import '@/layouts/header/Header.scss';
-import { SCREENS_PATH } from '@/config/constant.ts';
+import { SCREENS_PATH } from '@/config/constant';
 
 const Header = () => {
   return <div className="header">

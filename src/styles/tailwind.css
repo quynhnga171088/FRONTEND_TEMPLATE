@@ -3,6 +3,7 @@
 @source "../../index.html";
 
 @theme {
+  --color-background-200: oklch(92% .008 60);
   --color-primary-50: var(--primary-50);
   --color-primary-100: var(--primary-100);
   --color-primary-200: var(--primary-200);
@@ -75,6 +76,8 @@
   --color-secondary-900: #0b0d0f;
   --color-secondary-950: #040506;
   --color-secondary: #5b6b79;
+
+  --color-orange-background-50: #fff7ed5c;
 
   --color-orange-50: #fff7ed;
   --color-orange-100: #ffedd5;
@@ -200,6 +203,7 @@
 
 /* Expose theme tokens as CSS custom properties for use with var() */
 :root {
+  --color-background-200: oklch(92% .008 60);
   --spacing-sidebar-width: 264px;
   --spacing-header-height: 74px;
   --spacing-topbar-height: 60px;
@@ -309,6 +313,7 @@
   --color-info-950: #041f27;
 
   /* ── Color scale: orange ─────────────────────────────────────────── */
+  --color-orange-background-50: #fff7ed5c;
   --color-orange-50:  #fff7ed;
   --color-orange-100: #ffedd5;
   --color-orange-200: #fed7aa;

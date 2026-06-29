@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom';
 import Header from '@/layouts/header/Header';
 import { authStore } from '@/stores/auth.store';
 import { ROLES_FOR_USER } from '@/config/constant';
+import '@/layouts/main/MainLayout.scss';
 
 const MainLayout = () => {
   const user = authStore(state => state.user);

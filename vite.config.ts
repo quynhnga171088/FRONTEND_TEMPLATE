@@ -6,7 +6,7 @@ import { resolve } from 'path';
 export default defineConfig({
   plugins: [
     react(),
-    // Fix: HMR tự reload khi sửa SCSS @use dependency (hero.scss, button.scss, ...)
+    // Fix: HMR tự reload khi sửa SCSS @use dependency (Hero.scss, Button.scss, ...)
     { name: 'scss-hmr', handleHotUpdate: ({ file, server }) => {
       if (file.endsWith('.scss')) { server.ws.send({ type: 'full-reload' }); return []; }
     }}
