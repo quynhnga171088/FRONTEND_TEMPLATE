@@ -5,6 +5,7 @@ import Header from '@/layouts/header/Header';
 import { authStore } from '@/stores/auth.store';
 import { ROLES_FOR_USER } from '@/config/constant';
 import '@/layouts/main/MainLayout.scss';
+import Footer from '@/layouts/footer/Footer.tsx';
 
 const MainLayout = () => {
   const user = authStore(state => state.user);
@@ -25,6 +26,7 @@ const MainLayout = () => {
           <Outlet />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
