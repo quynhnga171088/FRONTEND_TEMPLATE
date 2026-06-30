@@ -4,7 +4,10 @@
 @use 'fontawesome' as *;
 @use 'controls/Button';
 @use 'controls/Hero';
-@use 'controls/Star';
+@use 'size/mode.lg.scss' as mode-lg;
+@use 'size/mode.md.scss' as mode-md;
+@use 'size/mode.sm.scss' as mode-sm;
+@use 'size/mode.xs.scss' as mode-xs;
 @import './tailwind.css';
 @import 'simplebar-react/dist/simplebar.min.css';
 
@@ -15,6 +18,9 @@
 }
 html {
   scroll-behavior: smooth;
+}
+body.overflow-hidden {
+  overflow: hidden !important;
 }
 body {
   font-family: 'DM Sans', system-ui, sans-serif;
@@ -40,7 +46,7 @@ ul {
   margin: 0 auto;
   padding: 0 calc(var(--spacing) * 8);
 }
-.section    {
+.section {
   padding: calc(var(--spacing) * 10) 0;
 }
 

@@ -5,6 +5,7 @@ import Categories from '@/pages/home/categories/Categories';
 import { SCREENS_PATH } from '@/config/constant.ts';
 import FeaturedCourses from '@/pages/home/featuredCourses/FeaturedCourses.tsx';
 import Instructors from '@/pages/home/instructors/Instructors.tsx';
+import StatsBar from '@/pages/home/statsBar/StatsBar.tsx';
 
 const Home = () => {
   return (
@@ -89,30 +90,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <div className="stats-bar">
-        <div className="container">
-          <div className="stats-card shadow-lg">
-            <div className="stats-grid">
-              <div className="stat-item">
-                <div className="stat-num">100K+</div>
-                <div className="stat-label">Active Learners</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-num">500+</div>
-                <div className="stat-label">Expert Courses</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-num">95%</div>
-                <div className="stat-label">Completion Rate</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-num">4.9</div>
-                <div className="stat-label">Average Rating</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <StatsBar />
       <Categories />
       <FeaturedCourses />
       <Instructors />
